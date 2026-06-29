@@ -22,8 +22,10 @@ export default function Home() {
       />
       <Header />
       <main className="pb-20 md:pb-0">
-        <Hero />
-        <TrustStrip />
+        <div className="flex min-h-[calc(100svh-8.5rem)] flex-col max-[340px]:min-h-[calc(100svh-9.375rem)] md:min-h-[calc(100svh-4rem)]">
+          <Hero />
+          <TrustStrip />
+        </div>
         <Services />
         <ModelsServiced />
         <About />
