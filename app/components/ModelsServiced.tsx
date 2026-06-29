@@ -21,6 +21,15 @@ export function ModelsServiced() {
             Popular American and Japanese makes, ranked most to least popular.
           </h2>
         </div>
+        <div className="mt-8 rounded-lg border-l-4 border-red-800 bg-red-50 px-5 py-5 shadow-sm sm:flex sm:items-center sm:justify-between sm:gap-8 sm:px-6">
+          <div>
+            <p className="text-sm font-bold uppercase tracking-[0.2em] text-red-800">Mazda experts</p>
+            <h3 className="mt-2 text-2xl font-extrabold text-zinc-950">The Mazda experts in town.</h3>
+          </div>
+          <p className="mt-4 max-w-2xl text-base font-semibold leading-7 text-zinc-700 sm:mt-0">
+            Holton Automotive knows Mazda inside and out, and they work on all the following makes too.
+          </p>
+        </div>
         <ol className="mt-9 grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
           {servicedMakes.map(({ rank, make, origin, models }) => (
             <li key={make} className="rounded-lg border border-zinc-300 bg-stone-50 p-4 shadow-sm">
