@@ -1,10 +1,10 @@
 import { About } from "~/components/About";
 import { Contact } from "~/components/Contact";
 import { Footer } from "~/components/Footer";
-import { Gallery } from "~/components/Gallery";
 import { Header } from "~/components/Header";
 import { Hero } from "~/components/Hero";
 import { MobileContactBar } from "~/components/MobileContactBar";
+import { ModelsServiced } from "~/components/ModelsServiced";
 import { Reputation } from "~/components/Reputation";
 import { Services } from "~/components/Services";
 import { TrustStrip } from "~/components/TrustStrip";
@@ -25,8 +25,8 @@ export default function Home() {
         <Hero />
         <TrustStrip />
         <Services />
+        <ModelsServiced />
         <About />
-        <Gallery />
         <Reputation />
         <Contact />
       </main>
