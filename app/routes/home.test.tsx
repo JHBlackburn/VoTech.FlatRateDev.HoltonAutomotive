@@ -10,6 +10,7 @@ describe("home route", () => {
 
     expect(screen.getByRole("heading", { name: /Honest Auto Repair in Gainesville/i })).toBeInTheDocument();
     expect(screen.getByRole("heading", { name: /Everyday repairs/i })).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: /Deep Expertise with Mazda/i })).toBeInTheDocument();
     expect(screen.getByRole("heading", { name: /Popular American and Japanese makes/i })).toBeInTheDocument();
     expect(screen.getByRole("heading", { name: /A local shop/i })).toBeInTheDocument();
     expect(screen.getByRole("heading", { name: /Recommended by Gainesville drivers/i })).toBeInTheDocument();
@@ -34,6 +35,7 @@ describe("home route", () => {
     fireEvent.click(menuButton);
 
     expect(screen.getByRole("navigation", { name: /Mobile navigation/i })).toBeInTheDocument();
+    expect(screen.getAllByRole("link", { name: /Mazda Experts/i })[0]).toHaveAttribute("href", "#mazda-experts");
     expect(screen.getAllByRole("link", { name: /Models/i }).length).toBeGreaterThan(0);
     expect(screen.getByRole("button", { name: /Close menu/i })).toHaveAttribute("aria-expanded", "true");
   });

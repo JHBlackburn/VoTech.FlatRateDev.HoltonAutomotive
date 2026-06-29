@@ -5,6 +5,7 @@ import { business } from "~/data/business";
 const navItems = [
   { href: "#top", label: "Home" },
   { href: "#services", label: "Services" },
+  { href: "#mazda-experts", label: "Mazda Experts" },
   { href: "#models", label: "Models" },
   { href: "#about", label: "About" },
   { href: "#reviews", label: "Reviews" },
@@ -20,7 +21,7 @@ export function Header() {
         <a href="#top" className="text-base font-extrabold tracking-wide sm:text-lg">
           {business.name}
         </a>
-        <nav aria-label="Main navigation" className="hidden items-center gap-5 md:flex">
+        <nav aria-label="Main navigation" className="hidden items-center gap-5 lg:flex">
           {navItems.map((item) => (
             <a key={item.href} className="text-sm font-semibold text-stone-200 hover:text-white" href={item.href}>
               {item.label}
@@ -29,7 +30,7 @@ export function Header() {
         </nav>
         <button
           type="button"
-          className="inline-flex size-10 items-center justify-center rounded-md border border-zinc-700 bg-zinc-900 text-stone-50 hover:bg-zinc-800 focus:outline-none focus:ring-2 focus:ring-white md:hidden"
+          className="inline-flex size-10 items-center justify-center rounded-md border border-zinc-700 bg-zinc-900 text-stone-50 hover:bg-zinc-800 focus:outline-none focus:ring-2 focus:ring-white lg:hidden"
           onClick={() => setIsMenuOpen((current) => !current)}
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
           aria-expanded={isMenuOpen}
@@ -41,7 +42,7 @@ export function Header() {
       <nav
         id="mobile-navigation"
         aria-label="Mobile navigation"
-        className={`${isMenuOpen ? "block" : "hidden"} border-t border-zinc-800 bg-zinc-950 px-4 pb-4 md:hidden`}
+        className={`${isMenuOpen ? "block" : "hidden"} border-t border-zinc-800 bg-zinc-950 px-4 pb-4 lg:hidden`}
       >
         <div className="mx-auto grid max-w-6xl gap-2">
           {navItems.map((item) => (
