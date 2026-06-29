@@ -18,7 +18,8 @@ export function ModelsServiced() {
         <div className="max-w-3xl">
           <p className="text-sm font-bold uppercase tracking-[0.2em] text-red-800">Models serviced</p>
           <h2 id="models-title" className="mt-3 text-3xl font-extrabold text-zinc-950 sm:text-4xl">
-            Popular American and Japanese makes, ranked most to least popular.
+            Popular American and Japanese makes
+            <span className="block text-red-800">we service</span>
           </h2>
         </div>
         <div className="mt-8 rounded-lg border-l-4 border-red-800 bg-red-50 px-5 py-5 shadow-sm sm:flex sm:items-center sm:justify-between sm:gap-8 sm:px-6">
