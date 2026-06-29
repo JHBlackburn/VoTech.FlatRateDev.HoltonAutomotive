@@ -11,17 +11,20 @@ export const business = {
   websiteUrl: "https://REPLACE-WITH-FINAL-DOMAIN.com",
   canonicalUrl: "https://REPLACE-WITH-FINAL-DOMAIN.com",
   contactCardFilename: "holton-automotive.vcf",
-  hoursNote: "Call to confirm current hours before visiting.",
+  hoursNote: "Monday-Friday, 8:30 AM-5:30 PM",
+  openingHours: {
+    days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+    opens: "08:30",
+    closes: "17:30",
+  },
   mapsUrl:
     "https://www.google.com/maps/search/?api=1&query=1720%20NW%2053rd%20Ave%20Gainesville%20FL%2032653",
-  heroImage: "/images/holton-hero.jpg",
-  ogImage: "/images/holton-hero.jpg",
+  heroImage: "/images/holton-shop-front.png",
+  ogImage: "/images/holton-shop-front.png",
   images: {
-    hero: "/images/holton-hero.jpg",
-    shopExterior: "/images/shop-exterior.jpg",
-    serviceBay: "/images/service-bay.jpg",
-    team: "/images/team.jpg",
-    vehicleService: "/images/vehicle-service.jpg",
+    hero: "/images/holton-shop-front.png",
+    brakeService: "/images/brake-service.png",
+    oilService: "/images/oil-service.png",
   },
   seo: {
     title: "Holton Automotive | Auto Repair in Gainesville, FL",

@@ -17,6 +17,14 @@ export function autoRepairSchema() {
     telephone: business.phoneDisplay,
     url: business.websiteUrl,
     image: absoluteUrl(business.heroImage),
+    openingHoursSpecification: [
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: business.openingHours.days,
+        opens: business.openingHours.opens,
+        closes: business.openingHours.closes,
+      },
+    ],
     areaServed: {
       "@type": "City",
       name: "Gainesville, FL",

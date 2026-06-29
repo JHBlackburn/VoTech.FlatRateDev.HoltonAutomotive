@@ -10,10 +10,11 @@ const buttonBase =
   "inline-flex items-center justify-center gap-2 rounded-md px-4 py-3 text-sm font-bold transition focus:outline-none focus:ring-2 focus:ring-offset-2";
 
 export function ContactActions({ compact = false, className = "" }: ContactActionsProps) {
-  const sizeClass = compact ? "flex-1 px-3 py-2.5 text-xs" : "";
+  const layoutClass = compact ? "grid grid-cols-3" : "flex flex-col sm:flex-row";
+  const sizeClass = compact ? "w-full px-2 py-2.5 text-xs" : "";
 
   return (
-    <div className={`flex flex-col gap-3 sm:flex-row ${className}`}>
+    <div className={`${layoutClass} gap-3 ${className}`}>
       <a
         className={`${buttonBase} ${sizeClass} bg-red-800 text-white hover:bg-red-900 focus:ring-red-700 focus:ring-offset-stone-50`}
         href={`tel:${business.phoneHref}`}

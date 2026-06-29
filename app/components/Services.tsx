@@ -8,6 +8,8 @@ import {
   Settings,
   Wrench,
 } from "lucide-react";
+import { LightboxBackground } from "~/components/LightboxBackground";
+import { business } from "~/data/business";
 
 const services = [
   { name: "Oil Changes", icon: Gauge },
@@ -22,23 +24,29 @@ const services = [
 
 export function Services() {
   return (
-    <section id="services" className="bg-stone-50 px-4 py-16 sm:px-6 lg:px-8">
-      <div className="mx-auto max-w-6xl">
-        <div className="max-w-2xl">
-          <p className="text-sm font-bold uppercase tracking-[0.2em] text-red-800">Services</p>
-          <h2 className="mt-3 text-3xl font-extrabold text-zinc-950 sm:text-4xl">
-            Everyday repairs, maintenance, and answers that make sense.
-          </h2>
-        </div>
-        <div className="mt-9 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {services.map(({ name, icon: Icon }) => (
-            <article key={name} className="rounded-lg border border-zinc-300 bg-white p-5 shadow-sm">
-              <Icon className="text-red-800" aria-hidden="true" size={28} />
-              <h3 className="mt-4 text-lg font-extrabold text-zinc-950">{name}</h3>
-            </article>
-          ))}
-        </div>
+    <LightboxBackground
+      id="services"
+      titleId="services-title"
+      imageSrc={business.images.brakeService}
+      imageAlt="Technician installing a brake caliper and rotor"
+      imageTitle="Brake Service"
+      className="text-stone-50"
+      overlayClassName="bg-[linear-gradient(90deg,rgba(15,15,15,0.9),rgba(15,15,15,0.76)_58%,rgba(15,15,15,0.56))]"
+    >
+      <div className="max-w-2xl">
+        <p className="text-sm font-bold uppercase tracking-[0.2em] text-amber-300">Services</p>
+        <h2 id="services-title" className="mt-3 text-3xl font-extrabold sm:text-4xl">
+          Everyday repairs, maintenance, and answers that make sense.
+        </h2>
       </div>
-    </section>
+      <div className="mt-9 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        {services.map(({ name, icon: Icon }) => (
+          <article key={name} className="rounded-lg border border-white/20 bg-white/95 p-5 shadow-sm">
+            <Icon className="text-red-800" aria-hidden="true" size={28} />
+            <h3 className="mt-4 text-lg font-extrabold text-zinc-950">{name}</h3>
+          </article>
+        ))}
+      </div>
+    </LightboxBackground>
   );
 }

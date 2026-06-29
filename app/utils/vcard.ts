@@ -18,7 +18,7 @@ export function buildVCard() {
     )};${escapeVCardValue(business.country)}`,
     `URL:${business.websiteUrl}`,
     `NOTE:${escapeVCardValue(
-      "Local Gainesville auto repair shop. Call to confirm current hours before visiting.",
+      `Local Gainesville auto repair shop. Hours: ${business.hoursNote}.`,
     )}`,
     "END:VCARD",
   ];
