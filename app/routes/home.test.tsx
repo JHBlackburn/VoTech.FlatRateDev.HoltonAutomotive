@@ -51,6 +51,7 @@ describe("home route", () => {
     render(<Home />);
 
     expect(screen.getAllByText(business.hoursNote).length).toBeGreaterThan(0);
+    expect(screen.getByRole("link", { name: business.websiteDisplay })).toHaveAttribute("href", business.websiteUrl);
     expect(screen.getByText(/Call, save Holton Automotive to your phone/i)).toBeInTheDocument();
     expect(screen.queryByText(/Call to confirm current hours/i)).not.toBeInTheDocument();
 
@@ -101,11 +102,21 @@ describe("home route", () => {
 
     expect(tags).toContainEqual({ title: business.seo.title });
     expect(tags).toContainEqual({ name: "description", content: business.seo.description });
+    expect(tags).toContainEqual({ name: "robots", content: "index, follow" });
+    expect(tags).toContainEqual({ tagName: "link", rel: "canonical", href: business.canonicalUrl });
+    expect(tags).toContainEqual({ property: "og:url", content: business.canonicalUrl });
     expect(tags).toContainEqual({ property: "og:title", content: business.seo.title });
     expect(tags).toContainEqual({ property: "og:description", content: business.seo.description });
     expect(tags).toContainEqual({
       property: "og:image",
-      content: new URL(business.heroImage, business.canonicalUrl).toString(),
+      content: new URL(business.ogImage.src, business.canonicalUrl).toString(),
+    });
+    expect(tags).toContainEqual({ property: "og:image:width", content: "1200" });
+    expect(tags).toContainEqual({ property: "og:image:height", content: "630" });
+    expect(tags).toContainEqual({ name: "twitter:card", content: "summary_large_image" });
+    expect(tags).toContainEqual({
+      name: "twitter:image",
+      content: new URL(business.ogImage.src, business.canonicalUrl).toString(),
     });
   });
 });

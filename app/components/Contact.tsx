@@ -33,6 +33,14 @@ export function Contact() {
             </p>
             <div className="mt-6 space-y-2 text-base font-semibold text-zinc-900">
               <p>{business.phoneDisplay}</p>
+              <p>
+                <a
+                  className="underline decoration-red-800/35 underline-offset-4 hover:text-red-800"
+                  href={business.websiteUrl}
+                >
+                  {business.websiteDisplay}
+                </a>
+              </p>
               <p>{fullAddress}</p>
               <p>{business.hoursNote}</p>
             </div>

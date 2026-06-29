@@ -1,4 +1,5 @@
 import { describe, expect, it } from "vitest";
+import { business } from "~/data/business";
 import { createContactCardResponse } from "~/utils/contact-response";
 
 describe("download-contact vCard route", () => {
@@ -14,5 +15,6 @@ describe("download-contact vCard route", () => {
     expect(body).toContain("FN:Holton Automotive");
     expect(body).toContain("TEL;TYPE=WORK,VOICE");
     expect(body).toContain("ADR;TYPE=WORK");
+    expect(body).toContain(`URL:${business.websiteUrl}`);
   });
 });

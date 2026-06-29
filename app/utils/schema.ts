@@ -16,7 +16,7 @@ export function autoRepairSchema() {
     },
     telephone: business.phoneDisplay,
     url: business.websiteUrl,
-    image: absoluteUrl(business.heroImage),
+    image: absoluteUrl(business.ogImage.src),
     openingHoursSpecification: [
       {
         "@type": "OpeningHoursSpecification",

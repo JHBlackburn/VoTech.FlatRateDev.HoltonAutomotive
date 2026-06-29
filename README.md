@@ -28,13 +28,13 @@ The app is configured for React Router SSR on Vercel through `react-router.confi
 
 ## Business info
 
-Edit `app/data/business.ts` for the phone number, address, final domain, maps URL, SEO copy, and configured image paths. Contact actions, local business schema, Open Graph tags, and the vCard route all read from this config.
+Edit `app/data/business.ts` for the phone number, address, domain, maps URL, SEO copy, and configured image paths. Contact actions, local business schema, Open Graph tags, and the vCard route all read from this config.
 
-Before production, replace:
+Production URL:
 
 ```ts
-websiteUrl: "https://REPLACE-WITH-FINAL-DOMAIN.com"
-canonicalUrl: "https://REPLACE-WITH-FINAL-DOMAIN.com"
+websiteUrl: "https://holtonautomotive.com"
+canonicalUrl: "https://holtonautomotive.com"
 ```
 
 ## Photos to provide
@@ -43,17 +43,16 @@ Add these files under `public/images/`:
 
 | File | What to provide |
 | --- | --- |
-| `holton-hero.jpg` | Best exterior or shop-front image. This also drives the Open Graph/SMS preview. |
-| `shop-exterior.jpg` | Clear outside view of the building, sign, or entrance. |
-| `service-bay.jpg` | Clean service bay or vehicle being worked on. |
-| `team.jpg` | Real team or owner photo, if approved. |
-| `vehicle-service.jpg` | Close, natural repair or maintenance photo. |
+| `holton-shop-front.png` | Exterior shop-front image used by the hero. |
+| `holton-og.jpg` | 1200x630 social preview image for Open Graph, SMS, and large Twitter cards. |
+| `brake-service.png` | Brake service background image. |
+| `oil-service.png` | Oil service background image. |
 
 The site works before these are uploaded. Missing images show a built-in placeholder.
 
 ## Hero image and SMS previews
 
-`business.ogImage` defaults to `/images/holton-hero.jpg`, the same path used by the hero image. Change `business.heroImage` and `business.ogImage` together if a different preview image is approved. Metadata is rendered server-side so link previews and text-message previews can read it.
+`business.ogImage` points to `/images/holton-og.jpg`, a 1200x630 image generated from the real shop-front photo. Metadata is rendered server-side with absolute URLs, image dimensions, MIME type, and alt text so link previews and text-message previews can read it.
 
 ## vCard route
 

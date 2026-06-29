@@ -8,8 +8,9 @@ export const business = {
   state: "FL",
   postalCode: "32653",
   country: "USA",
-  websiteUrl: "https://REPLACE-WITH-FINAL-DOMAIN.com",
-  canonicalUrl: "https://REPLACE-WITH-FINAL-DOMAIN.com",
+  websiteDisplay: "holtonautomotive.com",
+  websiteUrl: "https://holtonautomotive.com",
+  canonicalUrl: "https://holtonautomotive.com",
   contactCardFilename: "holton-automotive.vcf",
   hoursNote: "Monday-Friday, 8:30 AM-5:30 PM",
   openingHours: {
@@ -20,7 +21,13 @@ export const business = {
   mapsUrl:
     "https://www.google.com/maps/search/?api=1&query=1720%20NW%2053rd%20Ave%20Gainesville%20FL%2032653",
   heroImage: "/images/holton-shop-front.png",
-  ogImage: "/images/holton-shop-front.png",
+  ogImage: {
+    src: "/images/holton-og.jpg",
+    width: 1200,
+    height: 630,
+    type: "image/jpeg",
+    alt: "Holton Automotive shop exterior in Gainesville, Florida",
+  },
   images: {
     hero: "/images/holton-shop-front.png",
     brakeService: "/images/brake-service.png",
@@ -30,6 +37,8 @@ export const business = {
     title: "Holton Automotive | Auto Repair in Gainesville, FL",
     description:
       "Local Gainesville auto repair shop offering diagnostics, maintenance, AC repair, alignments, brakes, and general automotive service.",
+    keywords:
+      "Holton Automotive, Gainesville auto repair, Gainesville mechanic, Mazda repair Gainesville, brake service, oil changes, AC repair",
     contactTitle: "Save Holton Automotive to Your Phone",
     contactDescription:
       "Tap to save Holton Automotive, call the shop, or get directions in Gainesville, Florida.",
